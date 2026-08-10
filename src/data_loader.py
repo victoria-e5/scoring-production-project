@@ -1,4 +1,3 @@
-# src/data_loader.py
 import pandas as pd
 
 from src.config import DATA_FILES, DATA_PATH
