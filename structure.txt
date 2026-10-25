@@ -1,0 +1,33 @@
+Структура папок
+Серийный номер тома: F0F7-6B54
+C:.
+|   main.py
+|   README.md
+|   requirements.txt
+|   structure.txt
+|   
++---data
+|       bureau.csv
+|       previous_loans.csv
+|       test.csv
+|       train.csv
+|       transactions.csv
+|       
++---notebooks
+|       competition.ipynb
+|       
++---src
+|       config.py
+|       data_loader.py
+|       features.py
+|       models.py
+|       __init__.py
+|       
+\---test
+        conftest.py
+        test_config.py
+        test_data_loader.py
+        test_features.py
+        test_models.py
+        __init.py
+        
