@@ -3,7 +3,9 @@ from catboost import CatBoostClassifier
 def train_model(X_train, y_train):
     cat_features = X_train.select_dtypes(include=['object']).columns.tolist()
     
-    X_train[cat_features] = X_train[cat_features].fillna("Missing")
+
+    for col in cat_features:
+        X_train[col] = X_train[col].fillna("Missing").astype(str)
     
     model = CatBoostClassifier(
         iterations=500, 

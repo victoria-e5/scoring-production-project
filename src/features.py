@@ -15,4 +15,7 @@ def build_features(data_dict):
     X_train = train.drop(columns=["target", "application_id", "client_id"], errors="ignore")
     X_test = test.drop(columns=["application_id", "client_id"], errors="ignore")
     
+   
+    X_test = X_test[X_train.columns]
+    
     return X_train, y_train, X_test, test[["application_id", "client_id"]]

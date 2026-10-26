@@ -14,7 +14,10 @@ def main():
     model, cat_features = train_model(X_train, y_train)
     
     print("Подготовка предсказаний...")
-    X_test[cat_features] = X_test[cat_features].fillna("Missing")
+    for col in cat_features:
+        if col in X_test.columns:
+            X_test[col] = X_test[col].fillna("Missing").astype(str)
+            
     predictions = model.predict_proba(X_test)[:, 1]
     
 
